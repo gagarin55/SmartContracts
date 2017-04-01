@@ -14,6 +14,7 @@ var UserManager = artifacts.require("./UserManager.sol");
 var FakeCoin = artifacts.require("./FakeCoin.sol");
 var FakeCoin2 = artifacts.require("./FakeCoin2.sol");
 var FakeCoin3 = artifacts.require("./FakeCoin3.sol");
+var ContractsManager = artifacts.require("./ContractsManager.sol");
 
 module.exports = function(deployer) {
   deployer.deploy(Stub);
@@ -32,4 +33,5 @@ module.exports = function(deployer) {
   deployer.deploy(FakeCoin);
   deployer.deploy(FakeCoin2);
   deployer.deploy(FakeCoin3);
+  deployer.deploy(ContractsManager);
 };

@@ -149,6 +149,10 @@ contract ContractsManager is Managed {
         return contracts[_id];
     }
 
+    function getContractId(address value) constant returns (uint) {
+        return contractsId[value];
+    }
+
     function setAddress(address value) execute(Shareable.Operations.editMint) returns (uint) {
         if (contractsId[value] == uint(0x0)) {
             contracts[contractsCounter] = value;
